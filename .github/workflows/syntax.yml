@@ -14,14 +14,14 @@ jobs:
         run: gcc src/add.c -o add
 
       - name: Ruleaza teste
-        run: test1=./add 1 2
-        run: test2=./add 10 5
-        run: test3=./add 50 50
-        run: test4=./add 1 99
-        run: test5=./add 1 1
-
-        run: test test1 -eq 3
-        run: test test2 -eq 15
-        run: test test3 -eq 100
-        run: test test4 -eq 100
-        run: test test5 -eq 2
+        run: | 
+         test1=./add 1 2
+         test2=./add 10 5
+         test3=./add 50 50
+         test4=./add 1 99
+         test5=./add 1 1
+         test test1 -eq 3
+         test test2 -eq 15
+         test test3 -eq 100
+         test test4 -eq 100
+         test test5 -eq 2
