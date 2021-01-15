@@ -15,13 +15,8 @@ jobs:
 
       - name: Ruleaza teste
         run: | 
-         test1=./add 1 2
-         test2=./add 10 5
-         test3=./add 50 50
-         test4=./add 1 99
-         test5=./add 1 1
-         test test1 -eq 3
-         test test2 -eq 15
-         test test3 -eq 100
-         test test4 -eq 100
-         test test5 -eq 2
+         test $(./add 1 2) -eq 3
+         test $(./add 10 5) -eq 15
+         test $(./add 50 50) -eq 100
+         test $(./add 1 99) -eq 100
+         test $(./add 1 1) -eq 2
