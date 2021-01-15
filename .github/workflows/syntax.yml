@@ -7,8 +7,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Copiaza repository-ul
+      - name: Serban Andrei | Copiaza repository-ul
         uses: actions/checkout@v2
       
       - name: Compileaza codul
         run: gcc src/add.c -o add
+
+      - name: Ruleaza teste
+        run: test ./add 1 2 -eq 3
