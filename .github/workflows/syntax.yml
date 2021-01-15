@@ -1,0 +1,14 @@
+name: syntax
+on: push
+
+jobs:
+  tester:
+    name: USO Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Copiaza repository-ul
+        uses: actions/checkout@v2
+      
+      - name: Compileaza codul
+        run: gcc src/add.c -o add
